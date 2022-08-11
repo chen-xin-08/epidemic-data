@@ -14,7 +14,7 @@ app.use('/api',router)
 
 router.get('/list', async (req:Request, res:Response) => {
     const {data} = await axios.post('https://api.inews.qq.com/newsqa/v1/query/inner/publish/modules/list?modules=localCityNCOVDataList,diseaseh5Shelf')
-    res.json({data})
+    res.json({...data.data})
 })
 
 app.listen(3000, () => {
