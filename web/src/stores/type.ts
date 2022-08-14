@@ -103,6 +103,7 @@ export interface Total {
 }
 
 export interface Children {
+    id: string;
 	name: string;
 	adcode: string;
 	date: string;
